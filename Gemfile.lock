@@ -62,16 +62,13 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
-  activemodel (>= 4.2.5.1)
-  activerecord (>= 4.2.7.1)
-  activesupport (>= 4.2.2)
+  activerecord
   json
   pg
-  puma (>= 3.12.4)
-  rack (>= 1.6.12)
-  rack-protection (>= 1.5.5)
+  puma
+  rack
   rack-test
-  rake (>= 12.3.3)
+  rake
   rspec
   sinatra
   sinatra-activerecord
