@@ -11,7 +11,7 @@ end
 post '/' do
   @word = params[:word]
   redirect "/anagrams/#{@word}"
-  if Word.valid_word(word)
+  if Word.valid_word(@word)
     anagram_array = Person.get_birth_path_num(birthdate)
     redirect "/anagram/#{word}"
   else
