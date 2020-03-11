@@ -1,0 +1,9 @@
+
+<div class="container">
+  <div class="row">
+    <h1>Anagrams for <%= "#{@word}" %></h1>
+    <% @anagrams.each_with_index do |anagrams, index| %>
+    <p><%= "#{index} : #{@anagrams[index]}" %></p>
+    <% end %>
+  </div>
+</div>
