@@ -26,6 +26,7 @@ post '/words' do
   end
 end
 
+
 get '/words/:id/edit' do
   # find the word using params[:id]
   # and set it to the @word variable
@@ -44,3 +45,9 @@ put '/words/:id' do
   @word.save
   erb :"/words/show"
 end
+
+delete '/words/:id' do
+   word = Word.find(params[:id])
+   word.delete
+   redirect "/words"
+ end
