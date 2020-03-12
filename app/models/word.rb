@@ -1,6 +1,6 @@
 class Word < ActiveRecord::Base
-
-  before_create :add_letters
+  #before_create :add_letters
+  before_save :add_letters
   def add_letters
       characters = self.text.chars
       alphabetized_characters = characters.sort
@@ -53,7 +53,7 @@ class Word < ActiveRecord::Base
 
     reversed_letters
   end
-  
+
   def self.valid_input?(input)
     if input.length < 3 || input.nil?
       raise Exception.new("Word must be less than or equal to 3 characters.")
