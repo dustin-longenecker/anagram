@@ -1,10 +1,14 @@
 
+
 <div class="container">
   <div class="row">
-    <div class="col-md-3"></div>
     <h1 class="text-center text-danger">Anagrams for <%= "#{@word}" %></h1>
-    <% @anagrams.each_with_index do |anagrams, index| %>
-    <p class="text-center"><%= "#{index} : #{@anagrams[index]}" %></p>
+    <ul class="anagrams text-center">
+    <% if !@anagrams.nil? %>
+      <% @anagrams.each do |word| %>
+      <li style="list-style:none;"><%= "#{word.text}" %></li>
+      <% end %>
     <% end %>
+    </ul>
   </div>
 </div>
