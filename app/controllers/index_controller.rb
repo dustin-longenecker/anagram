@@ -10,13 +10,11 @@ end
 
 post '/' do
   @word = params[:word]
-  redirect "/anagrams/#{@word}"
-  if Word.valid_word(@word)
-    anagram_array = Person.get_birth_path_num(birthdate)
-    redirect "/anagram/#{word}"
-  else
-    @error = "You should enter a valid word containing only 3 letters."
-    erb :form
+  begin
+   Word.valid_input?(@word)
+   redirect "/anagrams/#{@word}"
+  rescue Exception => error
+    @error = error.message
+    erb :index
   end
-
 end

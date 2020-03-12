@@ -4,6 +4,9 @@
   <div class="col-md-6">
     <h1 class="text-center text-danger">Welcome to our</h1>
     <h1 class="text-center text-danger">ANAGRAM GENERATOR</h1>
+    <% if @error.present? %>
+      <p class='error'><%= "#{@error}" %></p>
+    <% end %>
 
     <form action="/" method="post" class="form">
       <div class="form-group">
