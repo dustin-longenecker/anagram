@@ -1,4 +1,4 @@
-class Word
+class Word < ActiveRecord::Base
 
   def self.find_anagrams(string)
     # Convert word to an array of letters
@@ -38,5 +38,5 @@ class Word
     reversed_letters
   end
 
-  
+
 end
