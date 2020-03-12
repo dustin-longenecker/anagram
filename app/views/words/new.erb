@@ -1,0 +1,20 @@
+<div class="row">
+<% if !@errors.blank? %>
+  <p class="alert alert-danger" role="alert">
+    <%= "#{@errors}" %>
+  </p>
+<% end %>
+
+
+<form action="/words" method="post" id="" class="text">
+    <div class="form-group">
+      <label for="text">New Word:</label>
+      <input type="text" name="text" value="word" class="form-control"/>
+    </div>
+
+    <div class="button">
+      <input type="submit" class="btn btn-primary" />
+    </div>
+</form>
+
+</div>
