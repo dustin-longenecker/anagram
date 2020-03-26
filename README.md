@@ -1,7 +1,8 @@
 # anagram
-  * Heroku: https://calm-fjord-66126.herokuapp.com/
+ * Heroku: https://calm-fjord-66126.herokuapp.com/
 
-# anagram is an application built using Ruby, Sinatra, and ActiveRevord.
+### anagram is an application built using Ruby, Sinatra, and ActiveRevord.
+ 
  * Accepts a word from the user.
  * Generates and responds with anagrams to the given word.
  * Ability to add words to the dictionary database.
